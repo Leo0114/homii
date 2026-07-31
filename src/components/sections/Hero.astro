@@ -6,6 +6,7 @@ import Button from "@/components/ui/Button";
 import StoreButton from "@/components/ui/StoreButton";
 import ScrollReveal from "@/components/ui/ScrollRevea";
 import placeHolderImage from "@/assets/placeholder.avif";
+import { APP_LINKS } from "@/constants/links";
 
 interface Props {
   currentLocale?: "es" | "en";
@@ -65,14 +66,14 @@ const stats = [
         <div class="mt-4 flex flex-wrap gap-3">
           <StoreButton
             store="appStore"
-            href={t.download.appStore.href}
+            href={APP_LINKS.APPLE_STORE}
             caption={t.download.appStore.caption}
             storeName={t.download.appStore.store}
             ariaLabel={t.download.appStore.ariaLabel}
           />
           <StoreButton
             store="playStore"
-            href={t.download.playStore.href}
+            href={APP_LINKS.GOOGLE_PLAY}
             caption={t.download.playStore.caption}
             storeName={t.download.playStore.store}
             ariaLabel={t.download.playStore.ariaLabel}

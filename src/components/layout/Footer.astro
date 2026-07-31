@@ -2,6 +2,7 @@
 import { getI18N } from "@/i18n/i18n";
 import Logo from "@/components/ui/Logo.astro";
 import StoreButton from "@/components/ui/StoreButton";
+import { APP_LINKS } from "@/constants/links";
 
 interface Props {
   currentLocale?: "es" | "en";
@@ -30,14 +31,14 @@ const columns = [
         <div class="flex flex-wrap gap-3">
           <StoreButton
             store="appStore"
-            href={t.download.appStore.href}
+            href={APP_LINKS.APPLE_STORE}
             caption={t.download.appStore.caption}
             storeName={t.download.appStore.store}
             ariaLabel={t.download.appStore.ariaLabel}
           />
           <StoreButton
             store="playStore"
-            href={t.download.playStore.href}
+            href={APP_LINKS.GOOGLE_PLAY}
             caption={t.download.playStore.caption}
             storeName={t.download.playStore.store}
             ariaLabel={t.download.playStore.ariaLabel}
